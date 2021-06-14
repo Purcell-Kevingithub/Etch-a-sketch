@@ -5,7 +5,6 @@ function addSquarestoContainer(num, callback) {
   for (let i = 0; i < num; i++) {
     let square = document.createElement("div");
     square.classList.add("square");
-    square.innerHTML = "This is a square";
     container.appendChild(square);
   }
   callback();
@@ -16,11 +15,10 @@ function addHoverEffect() {
   squares.forEach((square) => {
     square.addEventListener("mouseenter", (e) => hoverEffect(e));
   });
-  console.log(squares);
 }
 
 function hoverEffect(e) {
-  e.target.classList.toggle("bcg-blue");
+  e.target.classList.toggle("bcg-black");
 }
 
 function clearGrid() {
@@ -42,4 +40,4 @@ function promptedSquares() {
   addSquarestoContainer(answer, addHoverEffect);
 }
 
-addSquarestoContainer(16, addHoverEffect);
+addSquarestoContainer(100, addHoverEffect);

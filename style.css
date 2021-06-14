@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Londrina+Sketch&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -13,30 +15,77 @@ body {
   height: 100vh;
   background-color: #eee;
   width: 100vw;
+  font-family: "Londrina Sketch", cursive;
+  position: relative;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 3.5rem;
 }
 
 .container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
   background-color: #b73239;
   width: 40vw;
   height: 40rem;
   margin-top: 1rem;
-  padding: 5rem;
+  padding: 8rem;
+  position: relative;
+  z-index: 1;
 }
 
 .square {
-  background-color: #ff1493;
-  border: 1px solid #2e8b57;
+  background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.bcg-blue {
-  background-color: blue;
+.bcg-black {
+  background-color: black;
+}
+
+.title {
+  position: absolute;
+  top: 24%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+#button {
+  background-color: #b73239;
+  color: #fff;
+  padding: 1rem 2rem;
+  border: none;
+  font-size: 3rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: "Londrina Sketch", cursive;
+}
+
+#button:hover {
+  outline: none;
+  color: #b73239;
+  background-color: black;
+}
+
+.left-knob,
+.right-knob {
+  position: absolute;
+  background: #fff;
+  width: 5rem;
+  height: 5rem;
+  z-index: 2;
+  bottom: 15%;
+  border-radius: 50%;
+}
+
+.left-knob {
+  left: 30%;
+}
+
+.right-knob {
+  right: 30%;
 }
